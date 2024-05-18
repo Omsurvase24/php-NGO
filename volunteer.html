@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="view port" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+       <nav>
+        <a href="index.html"><img src="http://localhost/NGO/static/logo-no-background.png" width="160.50" height="160.50"></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="">HOME</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="login.html">LOGIN</a>
+                </li>
+                <li>
+                    <a href="donate.html">DONATE</a>
+                </li>
+                <li>
+                    <a href="">SEARCH</a>
+                </li>
+                <li>
+                    <a href="">IMAGES</a>
+                </li>
+                <li>
+                  <a href="account.html">ACCOUNT</a>
+              </li>
+                <li>
+                  <a href="index.html" onclick="return confirm('Are you sure?')">LOGOUT</a>
+              </li>
+            </ul>
+        </div>
+       </nav>
+
+       <div class="text-box">
+        <h1> VOLUNTEERING</h1>
+       </div>
+</section>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    textarea {
+      resize: vertical;
+    }
+    
+    .btn-container {
+      text-align: center;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+    .container1{
+      text-align: center;
+    }
+    .container1{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Volunteer Application</h2>
+    <form action="volunteer.php" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="v_id" required>
+      </div>
+      <div class="form-group">
+        <label for="skills">Volunteering Skills</label>
+        <textarea id="skills" name="skills" rows="5" required></textarea>
+      </div>
+      <div class="btn-container">
+        <input type="submit" value="Submit" class="btn">
+      </div>
+      <div class="container1">
+        <p>Check your ID here <a href="checkid.php">Click</a></p>
+        </div>
+    </form>
+  </div>
+</body>
+</html>

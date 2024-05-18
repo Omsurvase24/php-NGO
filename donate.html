@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="view port" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+     body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+    }
+
+    .donation-form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #cccccc;
+    }
+
+    .donate-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: #007bff;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+
+    .donate-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+    <section class="header">
+       <nav>
+        <a href="index.html"><img src="http://localhost/NGO/static/logo-no-background.png" width="160.50" height="160.50"></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="indexu.html">HOME</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="login.html">LOGIN</a>
+                </li>
+                <li>
+                    <a href="">DONATE</a>
+                </li>
+                <li>
+                  <a href="volunteer.html">VOLUNTEER</a>
+              </li>
+                <li>
+                    <a href="">IMAGES</a>
+                </li>
+                <li>
+                  <a href="account.html">ACCOUNT</a>
+              </li>
+                <li>
+                  <a href="index.html" onclick="return confirm('Are you sure?')">LOGOUT</a>
+              </li>
+            </ul>
+        </div>
+       </nav>
+       <div class="text-box">
+        <h1 style="color:rgb(248, 246, 246);"> Donate</h1>
+        <p> Your small contribution can make someone's future better.
+        </p>
+       </div>
+</section>
+       <div class="container">
+        <h1>Donation Page</h1>
+        <div class="donation-form">
+          <form action="donate.php" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="id">ID:</label>
+              <input type="text" id="id" name="id" required>
+            </div>
+            <div class="form-group">
+              <label for="amount">Donation Amount:</label>
+              <input type="text" id="amount" name="amount">
+            </div>
+            <div class="form-group">
+              <label for="currency">Currency:</label>
+              <select id="currency" name="currency">
+                <option>select currency</option>
+    <option value="INR">Indian Rupee</option>
+   
+</select>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="social_sector">Social Sector:</label>
+              <select id="social_sector" name="social_sector" required>
+                <option value="">Select a sector</option>
+                <option value="women-empowerment">Women Empowerment</option>
+                <option value="disaster-management">Disaster Management</option>
+                <option value="homeless-people">Homeless People</option>
+                <option value="education">Education</option>
+                <option value="sports">Sports and Development for underpriviledged</option>
+                <option value="cancer">Cancer Treatments</option>
+                <option value="oldage">Oldage Homes</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="donation_type">Donation Type:</
+    label>
+    <select id="donation-type" name="donation_type" required>
+    <option value="">Select a donation type</option>
+    <option value="money">Money</option>
+    <option value="food">Food</option>
+    <option value="clothing">Clothing</option>
+    <option value="school-material">School Material</option>
+   
+    <!-- Add more options as needed -->
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    </div>
+    <button type="submit" class="donate-button" name="submit" value="submit">Donate</button>
+    </form>
+    </div>
+    
+      </div>  
+      // Get the sector ID and sector name from the URL query parameters
+      <script>
+const urlParams = new URLSearchParams(window.location.search);
+const sectorId = urlParams.get('sector_id');
+const sectorName = urlParams.get('sector_name');
+
+// Check if sector ID and sector name are present in the URL
+if (sectorId && sectorName) {
+  // Create a new option element for the newly added sector
+  const newOption = document.createElement('option');
+  newOption.value = sectorId;
+  newOption.text = sectorName;
+
+  // Append the new option to the dropdown list
+  const dropdown = document.getElementById('social_sector');
+  dropdown.appendChild(newOption);
+}
+</script>
+
+<div class="container1">
+  <p>Check your ID here <a href="checkid.php">Click</a></p>
+  </div>
+  
+</body>
+</html>

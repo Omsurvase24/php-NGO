@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="view port" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    h2{
+        font-size: 36px;
+    font-weight: 500;
+    margin-top: 5%;
+    text-align: center;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid #f9f7f7;
+    }
+    
+    th {
+        background-color: #ef9191;
+    }
+    
+    .button {
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 4px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <section class="header">
+       <nav>
+        <a href="index.html"><img src="http://localhost/NGO/static/logo-no-background.png" width="160.50" height="160.50"></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="">HOME</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="login.html">LOGIN</a>
+                </li>
+                <li>
+                    <a href="donate.html">DONATE</a>
+                </li>
+                <li>
+                    <a href="volunteer.html">VOLUNTEER</a>
+                </li>
+                <li>
+                    <a href="">ACCOUNT</a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="return confirm('Are you sure?')">LOGOUT</a>
+                </li>
+            </ul>
+        </div>
+       </nav>
+       <div class="text-box">
+        <h1> Account Action</h1>
+       </div>
+</section>
+<h2>Account Management</h2>
+
+<table>
+    <tr>
+        <th>Task Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>Task 1</td>
+        <td>Account Details</Details></td>
+        <td>--</td>
+        <td>
+            <a href="accupdate.php" class="button">Update</a>
+            <a href="accobserve.php" class="button">Observe</a>
+            <a href="accdelete.php" class="button">Delete</a>
+        </td>
+    </tr>
+
+    <!-- Add more rows as needed -->
+</table>
+</body>
+</html>
