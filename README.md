@@ -39,3 +39,9 @@ MySQL database and related queries
 
 ### DONATION LIST
 ![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/0bc29df4-241d-46bd-b356-a5968f7d022e)
+
+### SECTOR LIST
+![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/6b9e3071-efec-44c2-a291-4f427780ee9c)
+![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/04866ae4-9f8b-482f-a6bd-a2297d4084b2)
+
+
