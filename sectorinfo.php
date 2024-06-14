@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
         body {
@@ -24,7 +25,8 @@
             margin-bottom: 20px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
@@ -35,8 +37,9 @@
         }
     </style>
 </head>
+
 <body>
-    <h1>Donation List</h1>
+    <h1>Sector List</h1>
 
     <?php
     // Replace with your database connection details
@@ -60,19 +63,19 @@
 
     <table>
         <tr>
-            
+
             <th>Sector Id</th>
             <th>Sector Name</th>
-            
+
         </tr>
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                
-                echo "<td>".$row["sector_id"]."</td>";
-                echo "<td>".$row["sector_name"]."</td>";
-                
+
+                echo "<td>" . $row["sector_id"] . "</td>";
+                echo "<td>" . $row["sector_name"] . "</td>";
+
                 echo "</tr>";
             }
         } else {
@@ -87,4 +90,5 @@
     $conn->close();
     ?>
 </body>
+
 </html>
