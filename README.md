@@ -26,3 +26,16 @@ MySQL database and related queries
 
 ### CHECK ID
 ![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/6f82dd84-125e-4834-af72-4cd8d41b833a)
+
+### CHECK DETAILS 
+![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/819c4fec-7d81-46ca-a35d-8740f57a844a)
+
+# ADMIN 
+### HOME PAGE
+![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/6faeab41-71fa-439f-8ec8-ae3ac7a37e25)
+
+### USER LIST
+![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/2aa1ad9f-a20a-495e-9843-1ee7267cbae2)
+
+### DONATION LIST
+![image](https://github.com/Omsurvase24/php-NGO/assets/115352062/0bc29df4-241d-46bd-b356-a5968f7d022e)
